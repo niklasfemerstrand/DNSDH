@@ -19,6 +19,12 @@ a great blast to teasingly merge cryptographic key exchanges with traffic that
 is rarely looked at by network administrators unless they want to censor or
 monitor you.
 
+## Usage
+
+* # perl dnsdhd.pl
+* $ perl client.example.pl 1338 1337
+* $ perl client.example.pl 1337 1338 init
+
 ## Example flow
 
 * **ALICE:**
@@ -49,8 +55,4 @@ monitor you.
 * **ALICE:**
 	* `shared_secret = bob_public^alice_secret mod p`
 
-## Usage
 
-perl dnsdhd.pl
-perl client.example.pl 1338 1337
-perl client.example.pl 1337 1338 init
