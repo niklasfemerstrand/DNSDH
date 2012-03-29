@@ -21,7 +21,7 @@ monitor you.
 
 ## Usage
 
-**In different terminals:**
+In different terminals:
 * # perl dnsdhd.pl
 * $ perl client.example.pl 1338 1337
 * $ perl client.example.pl 1337 1338 init
