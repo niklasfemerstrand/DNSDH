@@ -21,32 +21,32 @@ monitor you.
 
 ## Example flow
 
-* ALICE:
+* **ALICE:**
 	* `Declare p, g, alice_private`
 	* `alice_public = g^alice_private mod p`
 	* $ dig @127.0.0.1 A dnsdhinit.p.g.alice_public
-* DNS:
+* **DNS:**
 	* sessionid.699659
-* ALICE:
+* **ALICE:**
 	* ->BOB DNSDH_INIT: 699659
-* BOB:
+* **BOB:**
 	* $ dig @127.0.0.1 A sessionid.699659
-* DNS:
+* **DNS:**
 	* p.g.alice_public
-* BOB:
+* **BOB:**
 	* `Declare bob_private`
 	* `bob_public = g^bob_private mod p`
 	* `shared_secret = alice_public^bob_private mod p`
 	* $ dig @127.0.0.1 A dnsdhinit.bob_public
-* DNS:
+* **DNS:**
 	* sessionid.800565
-* BOB:
+* **BOB:**
 	* ->ALICE DNSDH_FINISH: 800565
-* ALICE:
+* **ALICE:**
 	* $ dig sessionid.800565
-* DNS:
+* **DNS:**
 	* bob_public
-* ALICE:
+* **ALICE:**
 	* `shared_secret = bob_public^alice_secret mod p`
 
 ## Usage
