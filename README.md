@@ -51,6 +51,6 @@ monitor you.
 
 ## Usage
 
-$ perl dnsdhd.pl
-$ ./client.example.pl 1338 1337
-$ ./client.example.pl 1337 1338 init
+perl dnsdhd.pl
+perl client.example.pl 1338 1337
+perl client.example.pl 1337 1338 init
